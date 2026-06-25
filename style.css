@@ -1,0 +1,576 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#000000;
+color:white;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:32px;
+font-weight:700;
+color:#00aaff;
+}
+
+nav a{
+    position: relative;
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #00aaff;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+nav a:hover{
+    transform: scale(1.1);
+    background: #00aaff;
+    box-shadow: 0 0 20px #00aaff;
+}
+
+nav a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transition: 0.5s;
+}
+
+nav a:hover::before{
+    left: 100%;
+}
+
+nav a:hover{
+    transform: translateY(-5px) scale(1.1);
+    box-shadow:
+    0 0 10px #00aaff,
+    0 0 20px #00aaff,
+    0 0 40px #00aaff;
+}
+
+.btn{
+padding:12px 25px;
+background:#00aaff;
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+text-decoration:none;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px #00aaff;
+}
+
+/* SECTION */
+
+.section{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:120px 10%;
+}
+
+/* HOME */
+
+.home{
+
+min-height: 100vh;
+background-image: url(ewbn.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.content-box{
+display:flex;
+gap:60px;
+align-items:center;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
+padding:50px;
+border-radius:25px;
+box-shadow:0 0 30px rgba(0,170,255,.3);
+animation:fadeUp 1s ease;
+}
+
+.profile-image img{
+width:300px;
+height:300px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #00aaff;
+box-shadow:0 0 30px #00aaff;
+transition:.5s;
+}
+
+.profile-image img:hover{
+transform:scale(1.05);
+}
+
+.home-text h1{
+font-size:60px;
+color:#00aaff;
+}
+
+.home-text h3{
+font-size:30px;
+}
+
+.home-text p{
+margin:20px 0;
+line-height:1.8;
+}
+
+/* BOXES */
+
+.box{
+max-width:800px;
+padding:40px;
+border-radius:25px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+box-shadow:0 0 25px rgba(0,170,255,.2);
+transition:.5s;
+}
+
+.box:hover{
+transform:translateY(-10px) scale(1.03);
+}
+
+/* ABOUT */
+
+.about{
+
+background-image:url("jsah.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+
+/* TRAVELS */
+
+.travels{
+    min-height:100vh;
+
+    background-image:url("jsah.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* CONTACT */
+
+.contact{
+    min-height:100vh;
+
+    background-image:url("jsah.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-30px);
+}
+100%{
+transform:translateY(0);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:900px){
+
+.content-box{
+flex-direction:column;
+text-align:center;
+}
+
+.home-text h1{
+font-size:40px;
+}
+
+.profile-image img{
+width:220px;
+height:220px;
+}
+}
+
+.about-box{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    max-width:900px;
+    padding:40px;
+    margin:auto;
+
+    background:rgba(255,255,255,0.08);
+    border-radius:25px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 0 25px rgba(0,170,255,.3);
+    transition:.5s;
+}
+
+.about-box:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 30px #00aaff;
+}
+
+.about-img{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+    border:3px solid #00aaff;
+}
+
+.about-text{
+    flex:3;
+width:100px;
+
+}
+
+.about-text h2{
+    color:#00aaff;
+    margin-bottom:15px;
+}
+
+
+.skills-box{
+    margin-top:25px;
+    padding:20px;
+
+    background:rgba(255,255,255,0.08);
+
+    border-radius:15px;
+
+    border:1px solid rgba(0,170,255,.4);
+
+    box-shadow:0 0 15px rgba(0,170,255,.2);
+}
+
+.skills-box h3{
+    color:#00aaff;
+    margin-bottom:15px;
+}
+
+.skill{
+    display:inline-block;
+
+    margin:5px;
+    padding:10px 18px;
+
+    background:#00aaff;
+
+    color:white;
+
+    border-radius:20px;
+
+    transition:.3s;
+}
+
+.skill:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 15px #00aaff;
+}
+
+.travel-gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.travel-gallery img{
+    width:105%;
+    height:350px; /* mas malaki */
+
+    object-fit:cover;
+
+    border-radius:15px;
+    border:3px solid #00aaff;
+
+    transition:.4s;
+}
+
+.travel-gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #00aaff;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    max-width:900px;
+    width:100%;
+}
+
+.contact-box{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+
+    padding:30px;
+    border-radius:20px;
+
+    text-align:center;
+
+    border:2px solid rgba(0,170,255,.3);
+
+    box-shadow:0 0 15px rgba(0,170,255,.2);
+
+    transition:.4s;
+}
+
+.contact-box:hover{
+    transform:translateY(-10px) scale(1.05);
+
+    box-shadow:
+    0 0 20px #00aaff,
+    0 0 40px #00aaff;
+}
+
+.contact-box h3{
+    color:#00aaff;
+    margin-bottom:10px;
+}
+
+.contact-box p{
+    color:white;
+    font-size:18px;
+}
+@media(max-width:768px){
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+.projects-box{
+    .projects{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background-image:url("jsah.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+}
+
+.projects-box:hover{
+    transform:scale(1.02);
+    box-shadow:0 0 25px #00aaff;
+}
+
+.projects-box.clicked{
+    animation:pulse .5s ease;
+}
+
+.project-gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.project-gallery img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+
+    border-radius:15px;
+
+    transition:.4s;
+}
+
+.project-gallery img:hover{
+    transform:scale(1.05);
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(0.95);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+.home-box{
+     display:flex;
+     align-items:center;
+     gap:40px;
+
+     max-width:1000px;
+     width:90%;
+
+     padding:40px;
+
+     background:rgba(0,0,0,0.45);
+     backdrop-filter:blur(10px);
+ 
+     border-radius:25px;
+
+     border:2px solid rgba(0,170,255,.4);
+
+     box-shadow:0 0 25px rgba(0,170,255,.3);
+
+     transition:.4s ease;
+
+     animation:fadeUp 1s ease;
+}
+
+.home-box:hover{
+    transform:translateY(-10px) scale(1.02);
+
+     box-shadow:
+     0 0 20px #00aaff,
+     0 0 40px #00aaff;
+}
+
+.home-text h1{
+     color:#00aaff;
+     font-size:55px;
+}
+
+.home-text p{
+     margin-top:15px;
+     line-height:1.8;
+}
+
+.profile-image img{
+     width:280px;
+     height:280px;
+     object-fit:cover;
+
+     border-radius:20px;
+
+     border:4px solid #00aaff;
+
+     box-shadow:0 0 20px #00aaff;
+}
+
+@keyframes fadeUp{
+    from{
+         opacity:0;
+         transform:translateY(50px);
+    }
+
+    to{
+         opacity:1;
+         transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+    .home-box{
+         flex-direction:column;
+         text-align:center;
+    }
+
+    .home-text h1{
+         font-size:40px;
+    }
+
+    .profile-image img{
+         width:220px;
+         height:220px;
+    }
+}
+
+.projects{
+     min-height:100vh;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+
+     background-image:url("");
+     background-size:cover;
+     background-position:center;
+     background-repeat:no-repeat;
+}
+
+.projects{
+     min-height:100vh;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+
+     background-image:url("jsah.jpg");
+     background-size:cover;
+     background-position:center;
+     background-repeat:no-repeat;
+     background-attachment:fixed;
+}
+
